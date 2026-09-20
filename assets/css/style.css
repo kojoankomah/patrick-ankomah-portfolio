@@ -745,6 +745,35 @@ body {
   gap: 1.3rem;
 }
 
+.about-portrait {
+  position: relative;
+  width: min(100%, 310px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin: 0 0 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+  background: var(--cream);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+.about-portrait::after {
+  position: absolute;
+  inset: 0;
+  border: 6px solid rgba(255, 255, 255, 0.35);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .about-copy p {
   margin: 0;
   color: var(--ink-soft);
